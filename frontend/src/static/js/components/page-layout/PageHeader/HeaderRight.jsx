@@ -139,48 +139,6 @@ export function HeaderRight(props) {
                         <MaterialIcon type="search" />
                       </CircleIconButton>
                     </div>
-
-                    <UploadMediaButton user={user} links={links} />
-
-                    <div
-                      className={
-                        (user.is.anonymous ? 'user-options' : 'user-thumb') +
-                        (!user.is.anonymous || header.hasThemeSwitcher ? '' : ' visible-only-in-extra-small')
-                      }
-                    >
-                      <PopupTrigger contentRef={popupContentRef}>
-                        {user.is.anonymous ? (
-                          <CircleIconButton aria-label="Settings">
-                            <MaterialIcon type="more_vert" />
-                          </CircleIconButton>
-                        ) : (
-                          <UserThumbnail size="small" isButton={true} />
-                        )}
-                      </PopupTrigger>
-
-                      <PopupContent contentRef={popupContentRef}>
-                        <NavigationContentApp
-                          initPage="main"
-                          pages={headerPopupPages(user, header.popupNavItems, header.hasThemeSwitcher)}
-                          pageChangeSelector={'.change-page'}
-                          pageIdSelectorAttr={'data-page-id'}
-                        />
-                      </PopupContent>
-                    </div>
-
-                    <LoginButton user={user} link={links.signin} hasHeaderThemeSwitcher={header.hasThemeSwitcher} />
-                    <RegisterButton
-                      user={user}
-                      link={links.register}
-                      hasHeaderThemeSwitcher={header.hasThemeSwitcher}
-                    />
-
-                    {PageStore.get('config-contents').header.right ? (
-                      <div
-                        className="on-header-right"
-                        dangerouslySetInnerHTML={{ __html: PageStore.get('config-contents').header.right }}
-                      ></div>
-                    ) : null}
                   </div>
                 </div>
               )}

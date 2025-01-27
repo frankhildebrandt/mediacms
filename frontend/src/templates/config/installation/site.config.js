@@ -12,10 +12,10 @@ module.exports = {
   },
   logo: {
     lightMode: {
-      img: './static/images/epsilon-logo-normal.png',
+      img: './static/images/etv.png',
     },
     darkMode: {
-      img: './static/images/epsilon-logo-normal.png',
+      img: './static/images/etv.png',
     },
   },
   pages: {

@@ -550,30 +550,6 @@ export default function CommentsList(props) {
 
   return (
     <div className="comments-list">
-      <div className="comments-list-inner">
-        <CommentsListHeader commentsLength={comments.length} />
-
-        {MediaPageStore.get('media-data').enable_comments ? <CommentForm media_id={mediaId} /> : null}
-
-        {displayComments
-          ? comments.map((c) => {
-              return (
-                <Comment
-                  key={c.uid}
-                  comment_id={c.uid}
-                  media_id={mediaId}
-                  text={c.text}
-                  author_name={c.author_name}
-                  author_link={c.author_profile}
-                  author_thumb={SiteContext._currentValue.url + '/' + c.author_thumbnail_url.replace(/^\//g, '')}
-                  publish_date={c.add_date}
-                  likes={0}
-                  dislikes={0}
-                />
-              );
-            })
-          : null}
-      </div>
     </div>
   );
 }

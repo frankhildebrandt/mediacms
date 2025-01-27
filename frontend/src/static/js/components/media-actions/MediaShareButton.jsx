@@ -49,26 +49,7 @@ export function MediaShareButton(props) {
   }
 
   return (
-    <div className="share">
-      <PopupTrigger contentRef={popupContentRef}>
-        <button>
-          <CircleIconButton type="span">
-            <MaterialIcon type="share" />
-          </CircleIconButton>
-          <span>{translateString("SHARE")}</span>
-        </button>
-      </PopupTrigger>
-
-      <PopupContent contentRef={popupContentRef} hideCallback={onPopupHide}>
-        <NavigationContentApp
-          initPage={popupCurrentPage}
-          pageChangeSelector={'.change-page'}
-          pageIdSelectorAttr={'data-page-id'}
-          pages={props.isVideo ? videoSharePopupPages(triggerPopupClose) : mediaSharePopupPages()}
-          focusFirstItemOnPageChange={false}
-          pageChangeCallback={onPopupPageChange}
-        />
-      </PopupContent>
+    <div>
     </div>
   );
 }

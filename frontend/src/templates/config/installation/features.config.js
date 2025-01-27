@@ -6,8 +6,8 @@ module.exports = {
     },
   },
   headerBar: {
-    hideLogin: false,
-    hideRegister: false,
+    hideLogin: true,
+    hideRegister: true,
   },
   sideBar: {
     hideHomeLink: false,
@@ -16,13 +16,13 @@ module.exports = {
   },
   media: {
     actions: {
-      share: true,
+      share: false,
       report: true,
       like: true,
-      dislike: true,
-      download: true,
-      comment: true,
-      save: true,
+      dislike: false,
+      download: false,
+      comment: false,
+      save: false,
     },
     shareOptions: [
       'embed',

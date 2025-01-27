@@ -1,7 +1,7 @@
 module.exports = {
   devEnv: 'true' === process.env.WEBPACK_DEV_SERVER,
   id: process.env.MEDIACMS_ID || 'mediacms-frontend',
-  title: process.env.MEDIACMS_TITLE || 'MediaCMS Demo',
+  title: process.env.MEDIACMS_TITLE || 'EpsilonTV',
   url: process.env.MEDIACMS_URL || 'UNDEFINED_URL',
   api: process.env.MEDIACMS_API || 'UNDEFINED_API',
   theme: {
@@ -12,12 +12,10 @@ module.exports = {
   },
   logo: {
     lightMode: {
-      svg: './static/images/logo_dark.svg',
-      img: './static/images/logo_dark.png',
+      img: './static/images/epsilon-logo-normal.png',
     },
     darkMode: {
-      svg: './static/images/logo_light.svg',
-      img: './static/images/logo_light.png',
+      img: './static/images/epsilon-logo-normal.png',
     },
   },
   pages: {

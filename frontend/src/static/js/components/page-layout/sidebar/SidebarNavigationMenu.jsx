@@ -37,6 +37,13 @@ export function SidebarNavigationMenu() {
   function MainMenuFirstSection() {
     const items = [];
 
+    items.push({
+      link: "https://sektor-wp-epsilon.kragosh.de/",
+      icon: 'back',
+      text: "Zurück zu Übersicht",
+      className: 'nav-item-home'
+    });
+
     if (!sidebar.hideHomeLink) {
       items.push({
         link: links.home,
@@ -45,7 +52,7 @@ export function SidebarNavigationMenu() {
         className: 'nav-item-home',
       });
     }
-
+/*
     if (PageStore.get('config-enabled').pages.featured && PageStore.get('config-enabled').pages.featured.enabled) {
       items.push({
         link: links.featured,
@@ -66,7 +73,7 @@ export function SidebarNavigationMenu() {
         className: 'nav-item-recommended',
       });
     }
-
+*/
     if (PageStore.get('config-enabled').pages.latest && PageStore.get('config-enabled').pages.latest.enabled) {
       items.push({
         link: links.latest,
@@ -75,20 +82,6 @@ export function SidebarNavigationMenu() {
         className: 'nav-item-latest',
       });
     }
-
-    if (
-      !sidebar.hideTagsLink &&
-      PageStore.get('config-enabled').taxonomies.tags &&
-      PageStore.get('config-enabled').taxonomies.tags.enabled
-    ) {
-      items.push({
-        link: links.archive.tags,
-        icon: 'local_offer',
-        text: translateString("Tags"),
-        className: 'nav-item-tags',
-      });
-    }
-
     if (
       !sidebar.hideCategoriesLink &&
       PageStore.get('config-enabled').taxonomies.categories &&
@@ -99,15 +92,6 @@ export function SidebarNavigationMenu() {
         icon: 'list_alt',
         text: translateString("Categories"),
         className: 'nav-item-categories',
-      });
-    }
-
-    if (PageStore.get('config-enabled').pages.members && PageStore.get('config-enabled').pages.members.enabled) {
-      items.push({
-        link: links.members,
-        icon: 'people',
-        text: translateString("Members"),
-        className: 'nav-item-members',
       });
     }
 
@@ -190,34 +174,6 @@ export function SidebarNavigationMenu() {
 
   function CustomMenuSection() {
     const items = [];
-
-    items.push({
-      link: '/about',
-      icon: 'contact_support',
-      text: translateString("About"),
-      className: 'nav-item-about',
-    });
-
-      items.push({
-      link: '/tos',
-      icon: 'description',
-      text: translateString("Terms"),
-      className: 'nav-item-terms',
-    });
-
-    items.push({
-      link: '/contact',
-      icon: 'alternate_email',
-      text: translateString("Contact"),
-      className: 'nav-item-contact',
-    });
-
-    items.push({
-      link: '/setlanguage',
-      icon: 'language',
-      text: translateString("Language"),
-      className: 'nav-item-language',
-    });
 
     return items.length ? <NavigationMenuList key="custom" items={formatItems(items)} /> : null;
   }

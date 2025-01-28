@@ -391,7 +391,7 @@ a.user-menu-top-link {
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  font-size: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem)* 0.471), 1.2rem);
+  font-size: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem)* 0.471), 1.2rem) !important;
 
   a {
     color: rgb(17, 17, 17) !important;

@@ -353,7 +353,7 @@ a.user-menu-top-link {
 
 .wp-nav {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
+  /*font-weight: 300; */
   font-size: 19.2px;
   padding-right: 1.5em;
 
@@ -364,7 +364,7 @@ a.user-menu-top-link {
   ul {
     display: flex;
     flex-direction: row;
-    gap: 3em;
+    gap: 1em;
 
     li {
       text-decoration: none;

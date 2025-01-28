@@ -389,7 +389,9 @@ a.user-menu-top-link {
   padding-top: 0.5em;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
-  font-size: 19.2px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  font-size: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem)* 0.471), 1.2rem);
 
   a {
     color: rgb(17, 17, 17) !important;

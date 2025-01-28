@@ -37,13 +37,6 @@ export function SidebarNavigationMenu() {
   function MainMenuFirstSection() {
     const items = [];
 
-    items.push({
-      link: "https://sektor-wp-epsilon.kragosh.de/",
-      icon: 'back',
-      text: "Zurück zu Übersicht",
-      className: 'nav-item-home'
-    });
-
     if (!sidebar.hideHomeLink) {
       items.push({
         link: links.home,

@@ -74,9 +74,77 @@ export function PageHeader(props) {
         'page-header' + (visibleMobileSearch ? ' mobile-search-field' : '') + (isAnonymous ? ' anonymous-user' : '')
       }
     >
-      <HeaderLeft />
-      <SearchField />
-      <HeaderRight />
+      <div className={"wp-header"}>
+        <div className={"wp-logo"}>
+            <a href="https://sektor-wp-epsilon.kragosh.de/">
+              <img
+                width="200"
+                height="85"
+                src="https://sektor-wp-epsilon.kragosh.de/wp-content/uploads/2025/01/epsilon-logo-normal.png"
+                alt="The Epsilon Program"
+              />
+            </a>
+        </div>
+
+        <div className={"wp-nav"}>
+          <ul className="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation wp-dark-mode-bg-image">
+            <li className="wp-block-navigation-item wp-block-navigation-link has-medium-font-size wp-dark-mode-bg-image">
+              <a
+                className="wp-block-navigation-item__content wp-dark-mode-bg-image"
+                href="https://sektorrp-epsilon-media.kragosh.de/"
+              >
+                <img src={"https://sektor-wp-epsilon.kragosh.de/wp-content/uploads/2025/01/etv.png"} height={"36px"}/>
+              </a>
+            </li>
+            <li className="wp-block-navigation-item wp-block-navigation-link has-medium-font-size wp-dark-mode-bg-image">
+              <a
+                className="wp-block-navigation-item__content wp-dark-mode-bg-image"
+                href="https://sektor-wp-epsilon.kragosh.de/unsere-lehre/"
+              >
+                <span className="wp-block-navigation-item__label wp-dark-mode-bg-image">Unsere Lehre</span>
+              </a>
+            </li>
+            <li className="wp-block-navigation-item wp-block-navigation-link has-medium-font-size wp-dark-mode-bg-image">
+              <a
+                className="wp-block-navigation-item__content wp-dark-mode-bg-image"
+                href="https://sektor-wp-epsilon.kragosh.de/unser-zentrum/"
+              >
+                <span className="wp-block-navigation-item__label wp-dark-mode-bg-image">Unser Zentrum</span>
+              </a>
+            </li>
+            <li className="wp-block-navigation-item wp-block-navigation-link has-medium-font-size wp-dark-mode-bg-image">
+              <a
+                className="wp-block-navigation-item__content wp-dark-mode-bg-image"
+                href="https://sektor-wp-epsilon.kragosh.de/wer-wir-sind/"
+              >
+                <span className="wp-block-navigation-item__label wp-dark-mode-bg-image">Die Reiniger</span>
+              </a>
+            </li>
+            <li className="wp-block-navigation-item wp-block-navigation-link has-medium-font-size wp-dark-mode-bg-image">
+              <a
+                className="wp-block-navigation-item__content wp-dark-mode-bg-image"
+                href="https://sektor-wp-epsilon.kragosh.de/for-celebrities/"
+              >
+                <span className="wp-block-navigation-item__label wp-dark-mode-bg-image">For Celebrities</span>
+              </a>
+            </li>
+            <li className="wp-block-navigation-item wp-block-navigation-link has-medium-font-size wp-dark-mode-bg-image">
+              <a
+                className="wp-block-navigation-item__content wp-dark-mode-bg-image"
+                href="https://sektor-wp-epsilon.kragosh.de/frag-epsilon/"
+              >
+                <span className="wp-block-navigation-item__label wp-dark-mode-bg-image">Frag Epsilon</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
   );
 }
+
+/*
+        <HeaderLeft/>
+        <SearchField/>
+        <HeaderRight/>
+*/
